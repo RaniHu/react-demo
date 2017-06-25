@@ -1,0 +1,32 @@
+{
+  "scripts": {
+    "start": "webpack-dev-server --inline --hot --host=0.0.0.0",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
+    "redux-actions": "^0.10.1",
+    "redux-thunk": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^15.0.22",
+    "@types/react-dom": "^0.14.23",
+    "@types/react-redux": "^4.4.38",
+    "@types/redux": "^3.6.0",
+    "@types/redux-actions": "^1.2.4",
+    "@types/redux-thunk": "^2.1.0",
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "html-webpack-plugin": "^2.28.0",
+    "sass-loader": "^6.0.3",
+    "source-map-loader": "^0.1.5",
+    "style-loader": "^0.16.1",
+    "ts-loader": "^0.8.2",
+    "typescript": "^2.2.2",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
