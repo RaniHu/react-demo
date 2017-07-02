@@ -10,7 +10,7 @@ ul {
   ul li {
     list-style-type: none;
     display: inline-block;
-    padding: 5px; }
+    padding-right: 10px; }
     ul li:first-child a {
       background-color: #7B77FF; }
     ul li:nth-child(2) a {
@@ -33,14 +33,14 @@ ul {
   margin: 30px;
   padding: 10px;
   border-radius: 5px; }
+  .parent > div {
+    padding: 10px 0; }
 
 .child {
   float: left;
   margin: 30px;
-  padding-bottom: 80px;
+  padding: 10px 10px 60px 10px;
   border-radius: 5px; }
 
 .clearfix {
   clear: both; }
-
-/*# sourceMappingURL=switch.css.map */

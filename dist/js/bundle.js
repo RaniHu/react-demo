@@ -22206,7 +22206,7 @@
 	"use strict";
 	Object.defineProperty(exports, "__esModule", { value: true });
 	const React = __webpack_require__(2);
-	const ReactDOM = __webpack_require__(38);
+	const ReactDom = __webpack_require__(38);
 	class SwitchBgChild extends React.Component {
 	    constructor() {
 	        super(...arguments);
@@ -22215,7 +22215,8 @@
 	        };
 	    }
 	    render() {
-	        return (React.createElement("div", { style: { "background": this.props.childBgColor }, className: "child" },
+	        return (React.createElement("div", { className: "child" },
+	            React.createElement("p", null, "\u70B9\u51FB\u6539\u53D8\u7236\u7EC4\u4EF6\u7684\u80CC\u666F\u8272"),
 	            React.createElement("ul", null,
 	                React.createElement("li", null,
 	                    React.createElement("a", { "data-color": "#7B77FF", onClick: this.props.changeParentColor }, "\u00A0")),
@@ -22233,31 +22234,27 @@
 	    constructor() {
 	        super(...arguments);
 	        this.state = {
-	            parentBgColor: '',
-	            tipsColor: '',
-	            childBgColor: ''
+	            parentBgColor: ''
 	        };
 	    }
 	    changeParentBgColor(e) {
 	        this.setState({ parentBgColor: e.target.getAttribute("data-color") });
-	        this.setState({ tipsColor: "#ffffff" });
 	    }
 	    ;
 	    changeChild1Color(e) {
-	        ReactDOM.findDOMNode(this.refs.child1).style.background = e.target.getAttribute("data-color");
+	        ReactDom.findDOMNode(this.refs.child1).style.background = e.target.getAttribute("data-color");
 	    }
 	    ;
 	    changeChild2Color(e) {
-	        ReactDOM.findDOMNode(this.refs.child2).style.background = e.target.getAttribute("data-color");
+	        ReactDom.findDOMNode(this.refs.child2).style.background = e.target.getAttribute("data-color");
 	    }
 	    ;
 	    render() {
 	        let { parentBgColor } = this.state;
-	        let { tipsColor } = this.state;
 	        return (React.createElement("div", null,
 	            React.createElement("div", { style: { "background": parentBgColor }, className: "parent" },
 	                React.createElement("div", null,
-	                    React.createElement("span", { style: { "color": tipsColor } }, "\u6539\u53D8\u7B2C\u4E00\u4E2Achild\u80CC\u666F\u8272"),
+	                    React.createElement("p", null, "\u70B9\u51FB\u6539\u53D8\u7B2C\u4E00\u4E2Achild\u80CC\u666F\u8272"),
 	                    React.createElement("ul", null,
 	                        React.createElement("li", null,
 	                            React.createElement("a", { "data-color": "#7B77FF", onClick: this.changeChild1Color.bind(this) }, "\u00A0")),
@@ -22270,7 +22267,7 @@
 	                        React.createElement("li", null,
 	                            React.createElement("a", { "data-color": "#F1684E", onClick: this.changeChild1Color.bind(this) }, "\u00A0")))),
 	                React.createElement("div", null,
-	                    React.createElement("span", { style: { "color": tipsColor } }, "\u6539\u53D8\u7B2C\u4E8C\u4E2Achild\u80CC\u666F\u8272"),
+	                    React.createElement("span", null, "\u70B9\u51FB\u6539\u53D8\u7B2C\u4E8C\u4E2Achild\u80CC\u666F\u8272"),
 	                    React.createElement("ul", null,
 	                        React.createElement("li", null,
 	                            React.createElement("a", { "data-color": "#7B77FF", onClick: this.changeChild2Color.bind(this) }, "\u00A0")),
@@ -22281,10 +22278,10 @@
 	                        React.createElement("li", null,
 	                            React.createElement("a", { "data-color": "#FFE3B9", onClick: this.changeChild2Color.bind(this) }, "\u00A0")),
 	                        React.createElement("li", null,
-	                            React.createElement("a", { "data-color": "#F1684E", onClick: this.changeChild2Color.bind(this) }, "\u00A0")))),
-	                React.createElement("hr", null)),
-	            React.createElement(SwitchBgChild, { ref: "child1", changeParentColor: this.changeParentBgColor.bind(this), childBgColor: this.state.childBgColor }),
-	            React.createElement(SwitchBgChild, { ref: "child2", changeParentColor: this.changeParentBgColor.bind(this), childBgColor: this.state.childBgColor })));
+	                            React.createElement("a", { "data-color": "#F1684E", onClick: this.changeChild2Color.bind(this) }, "\u00A0"))))),
+	            React.createElement("hr", null),
+	            React.createElement(SwitchBgChild, { ref: "child1", changeParentColor: this.changeParentBgColor.bind(this) }),
+	            React.createElement(SwitchBgChild, { ref: "child2", changeParentColor: this.changeParentBgColor.bind(this) })));
 	    }
 	}
 	exports.default = SwitchBgParent;
