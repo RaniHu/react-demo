@@ -1,0 +1,5 @@
+@charset "utf-8";
+
+@function px2rem-640($px) {
+    @return $px * 16 / 640  + 0rem;
+}

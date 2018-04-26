@@ -2,6 +2,10 @@ import * as React from 'react';
 import * as ReactDom from 'react-dom';
 
 
+//样式
+import "./switch.scss";
+
+
 //切换子组件背景色
 class SwitchBgChild extends React.Component<any, any> {
 

@@ -1,0 +1,29 @@
+@charset "utf-8";
+@mixin border($side:'', $width:1px, $color: #eaeaea, $style:solid) {
+    @if $side!='' {
+        $side:'-#{$side}'
+    }
+    border#{$side}-width: $width;
+    border#{$side}-style: $style;
+    border#{$side}-color: $color;
+}
+
+@mixin line-clamp($line:1) {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+
+@mixin common-btn($width:4rem,$height: 1rem,$fontSize:0.7rem,$bgcolor:#f8584f,$color:#fff,$b-r:0.15rem) {
+    display: inline-block;
+    height: $height;
+    width: $width;
+    line-height: $height;
+    text-align: center;
+    background-color: $bgcolor;
+    color: $color;
+    font-size: $fontSize;
+    border-radius: $b-r;
+}
